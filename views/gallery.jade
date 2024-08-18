@@ -1,0 +1,17 @@
+extends layout
+
+html
+  body
+    block content
+      head
+        h1(style='font: 5em "Lucida Grande", Helvetica, Arial, sans-serif')
+          = title
+        p(style='font: 2em "Lucida Grande", Helvetica, Arial, sans-serif') Digital Submission Lesbian Reflex
+      body
+        div.container
+          table.table.table-striped
+            each image in imageArray
+              tr
+                td
+                  img(src=image.filepath, alt="")
+                td=image.name
