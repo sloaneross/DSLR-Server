@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const fs = require('fs');
+var path = require('path');
 
 var images = []
 
@@ -19,7 +20,7 @@ function getFolderFiles(path, extension) {
 }
 
 const fetchImages = (req, res, next) => {
-    images = getFolderFiles("public/images", "png");
+    images = getFolderFiles(path.join(__dirname, "../public/images"), "png");
     next();
   };
 
