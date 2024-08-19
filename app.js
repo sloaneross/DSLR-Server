@@ -10,7 +10,7 @@ var favicon = require('serve-favicon');
 const multer  = require('multer');
 
 var storage = multer.diskStorage({
-  destination: './public/images',
+  destination: path.join(__dirname, 'public/images'),
   filename: function (req, file, cb) {
     const unique = Date.now() + '-' + Math.round(Math.random() * 1E9)
     cb(null, file.originalname + unique + path.extname(file.originalname))
