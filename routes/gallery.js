@@ -5,6 +5,7 @@ const fs = require('fs');
 var images = []
 
 function getFolderFiles(path, extension) {
+    console.log(path)
     let files = fs.readdirSync(path);
     console.log(files);
     let filenames = files.filter((file) =>
