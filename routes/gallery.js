@@ -6,8 +6,10 @@ var images = []
 
 function getFolderFiles(path, extension) {
     let files = fs.readdirSync(path);
+    console.log(files);
     let filenames = files.filter((file) =>
       file.match(new RegExp(`.+\\.${extension}$`, "ig")))
+    console.log(filenames);
     return (filenames.map ( (filename) => {
             return ({
                 filepath:("images/" + filename), 
