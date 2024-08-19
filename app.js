@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var favicon = require('serve-favicon');
 
 
 
@@ -19,9 +20,9 @@ var storage = multer.diskStorage({
 
 var upload = multer({ storage: storage });
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var galleryRouter = require('./routes/gallery')
+
+var galleryRouter = require('./routes/gallery');
+var frameRouter = require('./routes/imageFrame');
 
 var app = express();
 
@@ -34,11 +35,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'statics')))
+app.use(express.static(path.join(__dirname, 'statics')));
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/', galleryRouter);
 app.use('/gallery', galleryRouter)
+app.use('/frame',frameRouter)
+
 
 app.post("/upload", upload.single('file'), (req, res) => {
   console.log("got post")

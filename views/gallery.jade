@@ -4,14 +4,18 @@ html
   body
     block content
       head
-        h1(style='font: 5em "Lucida Grande", Helvetica, Arial, sans-serif')
+        h1(style='font: 5em "Syne Mono", sans-serif')
           = title
-        p(style='font: 2em "Lucida Grande", Helvetica, Arial, sans-serif') Digital Submission Lesbian Reflex
+        p(style='font: 2em "Syne Mono", Arial, sans-serif') Digital Submission Lesbian Reflex
       body
         div.container
           table.table.table-striped
             each image in imageArray
               tr
                 td
-                  img(src=image.filepath, alt="")
-                td=image.name
+                  a(href='/frame/' + image.name)
+                    img(src=image.filepath, alt="", style='width:100%')
+              tr
+                td 
+                  a.btn(href='/frame/' + image.name)=image.name
+                // td=image.name

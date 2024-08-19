@@ -1,9 +1,14 @@
+@font-face {
+  font-family: 'Syne Mono'; /*a name to be used later*/
+  src: url('/fonts/SyneMono-Regular.ttf'); /*URL to font*/
+}
+
 body {
   padding: 25px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px "Syne Mono";
   color:floralwhite;
   background-image: url(/backgrounds/vlcsnap-2024-08-17-17h16m00s389.jpeg);
-  background-repeat: repeat-y;
+  background-repeat: repeat;
 }
 
 table {
@@ -11,6 +16,18 @@ table {
   text-align: center;
 }
 
+.btn {
+  background-color: floralwhite; /* Green */
+  border: none;
+  color: floralwhite;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  border-radius: 12px;
+  background: url(/backgrounds/tits.jpeg);
+}
 
 .header {
   height: 1000px; /* set the height of the header to 100 pixels */
