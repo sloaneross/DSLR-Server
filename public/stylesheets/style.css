@@ -37,3 +37,9 @@ table {
 a {
   color: #00B7FF;
 }
+
+.center {
+  position: relative;
+  top: 50%;
+  transform: translateY(10%);
+}

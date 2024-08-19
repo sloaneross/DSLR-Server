@@ -28,7 +28,7 @@ const fetchImages = (req, res, next) => {
 /* GET home page. */
 router.get('/', fetchImages, function(req, res, next) {
     console.log(images)
-    res.render('gallery', { title: 'D.S.L.R.', imageArray: images });
+    res.render('gallery', { title: 'D S L R', imageArray: images });
 });
 
 module.exports = router;
