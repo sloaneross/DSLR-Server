@@ -10,7 +10,7 @@ function getFolderFiles(path, extension) {
     let files = fs.readdirSync(path);
     console.log(files);
     let filenames = files.filter((file) =>
-      file.match(new RegExp(`.+\\.${extension}$`, "ig")))
+      file.match(new RegExp(`.+\\.${extension}$`, "ig"))).sort().reverse()
     console.log(filenames);
     return (filenames.map ( (filename) => {
             return ({

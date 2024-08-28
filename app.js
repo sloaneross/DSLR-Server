@@ -21,6 +21,7 @@ var upload = multer({ storage: storage });
 
 var galleryRouter = require('./routes/gallery');
 var frameRouter = require('./routes/imageFrame');
+var aboutRouter = require('./routes/about');
 
 var app = express();
 
@@ -36,9 +37,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'statics')));
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 
-app.use('/', galleryRouter);
-app.use('/gallery', galleryRouter)
-app.use('/frame',frameRouter)
+app.use('/', aboutRouter);
+app.use('/gallery', galleryRouter);
+app.use('/frame',frameRouter);
+app.use('/about', aboutRouter);
 
 
 app.post("/upload", upload.single('file'), (req, res) => {

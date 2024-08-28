@@ -1,0 +1,92 @@
+@font-face {
+    font-family: 'Syne Mono'; /*a name to be used later*/
+    src: url('/fonts/SyneMono-Regular.ttf'); /*URL to font*/
+  }
+
+
+  
+  body {
+    padding: 25px;
+    font: 14px "Syne Mono";
+    color:floralwhite;
+    background-image: url(/backgrounds/didyouseeit.jpeg);
+    background-size: 300px;
+    background-repeat: repeat;
+  }
+
+:root {
+    --skew-angle: -10deg;
+    --bg-color-1: #5945b4;
+    --bg-color-2: #1EE2D1;
+ }
+ /* Skew the background using the CSS transform property */
+ .skewed-background {
+    width: 20%;
+    margin-top: 2%;
+    transform: skewY(var(--skew-angle));
+    /* Set a linear gradient background using the CSS background property */
+    background: linear-gradient(110deg, var(--bg-color-1) 0%, var(--bg-color-2) 100%);
+    padding: 50px;
+    color: #000000;
+ }
+ /* Set styles for the h1 and p elements inside the skewed background */
+ .skewed-background h1 {
+    font-size: 48px;
+    margin: 0;
+    color: floralwhite;
+ }
+ .skewed-background p {
+    font-size: 18px;
+    margin: 10px 0 0;
+ }
+
+ .container-box-blue {
+    text-align: center;
+    background-color: #0000AA;
+    max-width: fit-content;
+    padding: 2%;
+    margin-left: auto;
+    margin-right: auto;
+ }
+
+ .container-box-red {
+    width: 90%;
+    text-align: center;
+    background-color: #AE0000;
+    padding: 10px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+ }
+
+ .container-box-purple {
+    width: 80%;
+    text-align: left;
+    background-color: #AA00A9;
+    padding: 20px;
+    margin: 30px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+ }
+
+ .container-box-purple h1 {
+    text-align: center;
+ }
+
+ .highlight {
+    color: #F2FF54
+ }
+
+ .btn {
+    background-color: floralwhite; /* Green */
+    border: none;
+    color: floralwhite;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    border-radius: 12px;
+    background: url(/backgrounds/tits.jpeg);
+  }
